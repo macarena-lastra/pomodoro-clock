@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+$title-size: 50px;
+$block-title-size: 30px;
+$block-length-size: 40px;
+$display-time-size: 130px;
+$display-title-size: 50px;
+
+
+
+$hoverBtnColor: #BB0029;
+$linkHvrColor: #F5841A;
+$lightColor: rgb(252, 247, 230);
+$darkColor: #03002C;
+
+body, html{
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  font-family: 'Cabin Sketch', cursive;
+  color: $darkColor;
+  background-color: $lightColor;
+}
+
+
+
+
+.App{
+  margin: auto;
+  width: 100%;
+  h1{
+    text-align: center;
+    font-size: $title-size;
+    font-weight: normal;    
+  }
+  
+  #block-length-settings{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    
+    #break, #session{
+      max-width: 50%;
+      min-width: 200px;
+      label{
+        width: 100%;
+        margin: 0px;
+        font-size: $block-title-size;
+        display: block;
+        text-align: center;
+      }
+      div{
+        font-size: $block-length-size;
+        margin: auto;
+        width: 100%;
+        display: flex;
+        span{
+         align-self: center;
+        }
+        .small-btn{
+          width: 30px;
+        }
+      }
+    }
+  }
+
+  #timer{
+    margin: auto;
+    width: 100%;
+    
+    h2, p{
+      text-align: center;
+    }
+    h2{
+      font-size: $display-title-size;
+      font-weight: normal;
+    }
+    p{
+      font-size: $display-time-size;
+      font-weight: bold;
+      margin: 0;
+      
+      
+    }
+    .finalCountdown{
+      color: $hoverBtnColor;
+    }
+    #control-buttons{
+      margin: auto;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      button{
+        padding: 10px;
+      }
+      .controls{
+        width: 50px;
+      }
+    }
+  }
+
+  button{
+    cursor: pointer;
+    border-style: none;
+    background-color: transparent;
+    svg{
+      fill: $darkColor;
+    }
+    svg:hover{
+      fill: $hoverBtnColor;
+    }
+  }
+  
+  footer{
+    font-family: Lora, cursive;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0px;
+    background-color: $darkColor;
+    width: 100%;
+    #credit{
+      color: $lightColor;
+      text-align: center;
+      a{
+        text-decoration: none;
+        color: $lightColor;
+      }
+      a:hover{
+        color: $linkHvrColor;
+      }
+    }
+  }
+}
+
+
+
+
+
